@@ -54,3 +54,9 @@ Binding(CTRL+D,
 
 !ENTRY org.yakindu.sct.builder.SCTBuilder 2 0 2022-04-11 14:48:33.898
 !MESSAGE Cannot generate Code for Statechart /hu.bme.mit.yakindu.analysis/model_input/example.sct. The file contains errors.
+
+!ENTRY org.eclipse.help 4 0 2022-04-11 14:53:01.584
+!MESSAGE Required attribute "label" missing from "topic" element in "/org.yakindu.sct.doc.user/help/user-guide/c-domain-toc.xml" (skipping element)
+
+!ENTRY org.eclipse.help 4 0 2022-04-11 14:53:01.597
+!MESSAGE Required attribute "label" missing from "topic" element in "/org.yakindu.sct.doc.user/help/user-guide/scxml_domain-toc.xml" (skipping element)

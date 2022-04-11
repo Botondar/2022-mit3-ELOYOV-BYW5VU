@@ -21,9 +21,9 @@ public class RunStatechart {
 		s.init();
 		s.enter();
 		s.runCycle();
-		//print(s);
+		print(s);
 		
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in)
 		do {
 			String cmd = scanner.nextLine();
 			if (cmd.contentEquals("start")) {
