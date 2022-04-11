@@ -1,0 +1,10 @@
+package hu.bme.mit.yakindu.analysis.workhere;
+
+public class Fel44 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
