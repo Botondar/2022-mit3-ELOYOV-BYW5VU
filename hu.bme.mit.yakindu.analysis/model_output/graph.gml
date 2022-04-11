@@ -529,7 +529,7 @@ graph
 				text	"
 	specification = null
 	namespace = null
-	name = Green
+	name = 
 	documentation = 
 	orthogonal = false
 	simple = true
