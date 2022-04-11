@@ -70,7 +70,7 @@ public class Main {
 			}
 		}
 		
-		fel44(s);
+		fel45(s);
 		
 		// Transforming the model into a graph representation
 		String content = model2gml.transform(root);
@@ -92,7 +92,34 @@ public class Main {
 				System.out.println("System.out.println(\"" + firstChar + " = \" + s.getSCInterface().get" + casedName  + "());");
 			}
 		}
+		System.out.println("}");	
+	}
+	
+	public static void fel45(Statechart s) {
+		
+		System.out.println("public static void main(String[] args) {");
+		
+		System.out.println("Scanner scanner = new Scanner(System.in);");
+		System.out.println("do {");
+		System.out.println("String line = scanner.nextLine()");
+		System.out.println("if (line.contentEquals(\"exit\")) {");
+		System.out.println("break;");
+		
+		TreeIterator<EObject> iterator = s.eAllContents();
+		while (iterator.hasNext()) {
+			EObject content = iterator.next();
+			if (content instanceof EventDefinition) {
+				EventDefinition evtDef = (EventDefinition)content;
+				String name = evtDef.getName();
+				System.out.println("} else if (line.contentEquals(\"" + name + "\") {");
+				System.out.println("s.raise" + name.toUpperCase().charAt(0) + name.substring(1) + "();");
+			}
+		}
 		System.out.println("}");
-				
+		System.out.println("s.runCycle();");
+		System.out.println("} while(true);");
+		System.out.println("}");
+		
+		fel44(s);
 	}
 }

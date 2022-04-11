@@ -24,6 +24,12 @@ public class ExampleStatemachine implements IExampleStatemachine {
 			black = true;
 		}
 		
+		private boolean ujEventTolunk;
+		
+		public void raiseUjEventTolunk() {
+			ujEventTolunk = true;
+		}
+		
 		private long whiteTime;
 		
 		public long getWhiteTime() {
@@ -48,6 +54,7 @@ public class ExampleStatemachine implements IExampleStatemachine {
 			start = false;
 			white = false;
 			black = false;
+			ujEventTolunk = false;
 		}
 	}
 	
@@ -213,6 +220,10 @@ public class ExampleStatemachine implements IExampleStatemachine {
 	
 	public void raiseBlack() {
 		sCInterface.raiseBlack();
+	}
+	
+	public void raiseUjEventTolunk() {
+		sCInterface.raiseUjEventTolunk();
 	}
 	
 	public long getWhiteTime() {
