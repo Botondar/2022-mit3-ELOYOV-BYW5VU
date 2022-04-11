@@ -35,7 +35,6 @@ public class Main {
 				State state = (State) content;
 				System.out.println(state.getName());
 				
-				// 2.4
 				EList<Transition> outTransitions = state.getOutgoingTransitions();
 				if (outTransitions.isEmpty())
 				{

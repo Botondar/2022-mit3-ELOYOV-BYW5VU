@@ -1,6 +1,5 @@
 package hu.bme.mit.yakindu.analysis.workhere;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.junit.Test;
@@ -27,28 +26,12 @@ public class Main {
 		// Reading model
 		Statechart s = (Statechart) root;
 		TreeIterator<EObject> iterator = s.eAllContents();
-		int i = 0; 
 		while (iterator.hasNext()) {
 			EObject content = iterator.next();
-			i++;
 			if(content instanceof State) {
 				State state = (State) content;
 				System.out.println(state.getName());
-				
-				// 2.4
-				EList<Transition> outTransitions = state.getOutgoingTransitions();
-				if (outTransitions.isEmpty())
-				{
-					System.out.println(state.getName() + " csapda allapot");
-				}
-				
-				// 2.5
-				if (state.getName().isEmpty()) {
-					System.out.println("Nevtelen allapot; javaslat: Allapot_" + i);
-				}
 			}
-			
-			// 2.3
 			if (content instanceof Transition)
 			{
 				Transition transition = (Transition)content;
